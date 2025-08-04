@@ -19,14 +19,16 @@ def web_print_c2f(input_temp=''):
     return f"{input_temp}C is equal to {convert_c_to_f(float(input_temp))}F"
 
 
-@app.route('/f2c/<input_temp>')
-def web_print_f2c(input_temp=''):
-    return f"{input_temp}F is equal to {convert_f_to_c(float(input_temp))}C"
-
-
 def convert_c_to_f(celsius):
     """Convert Celsius to Fahrenheit."""
     return celsius * 9 / 5 + 32
+
+
+# I Thought I would add the other convertion to complete the functionality
+
+@app.route('/f2c/<input_temp>')
+def web_print_f2c(input_temp=''):
+    return f"{input_temp}F is equal to {convert_f_to_c(float(input_temp))}C"
 
 
 def convert_f_to_c(fahrenheit):
