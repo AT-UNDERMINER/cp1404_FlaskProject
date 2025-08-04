@@ -1,3 +1,9 @@
+"""
+Damien Turner
+CP1404 - Practical Solution
+Program description: Flask Demo, Celsius and Fahrenheit converter
+"""
+
 from flask import Flask
 
 app = Flask(__name__)
